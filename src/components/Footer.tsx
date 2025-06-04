@@ -141,7 +141,7 @@ const Footer = () => {
                   (window.location.href = "mailto:Purpledrops.ai@gmail.com")
                 }
               >
-                Purpledrops.ai@gmail.com
+                purpledrops.ai@gmail.com
               </span>
             </span>
           </div>
