@@ -106,14 +106,15 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact:</h3>
             <address className="not-italic">
-              <p className="mb-2">2nd Floor, District Court Complex,</p>
-              <p className="mb-2">
-                Kottayi, Thrithampangotukara-Meenakshipuram
+              {/* Palakkad district Bar association, Civil station, Palakkad, Pin 678001 */}
+              {/* <p className="mb-2">2nd Floor, District Court Complex,</p> */}
+              <p className="">
+               Palakkad district Bar association
               </p>
-              <p className="mb-2">Karathuparicha, Kunathurmedu</p>
-              <p className="mb-2">Palakkad, Kerala 678 001</p>
+              <p className="">Civil station</p>
+              <p className="mb-2">Palakkad, Kerala 678001</p>
               <p className="mb-4"></p>
-              <p className="mb-2">+91 8089682807</p>
+              <p className="">+91 8089682807</p>
               <p className="mb-2">palakkadbarassociation@gmail.com</p>
             </address>
           </div>

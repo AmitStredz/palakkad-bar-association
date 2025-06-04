@@ -36,10 +36,9 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-gray-800">Address:</h3>
                     <address className="not-italic text-gray-600 mt-1">
-                      <p>2nd Floor, District Court Complex,</p>
-                      <p>Kottayi, Thrithampangotukara-Meenakshipuram</p>
-                      <p>Karathuparicha, Kunathurmedu</p>
-                      <p>Palakkad, Kerala 678 001</p>
+                      <p>Palakkad district Bar association</p>
+                      <p>Civil station</p>
+                      <p>Palakkad, Kerala 678001</p>
                     </address>
                   </div>
                 </div>

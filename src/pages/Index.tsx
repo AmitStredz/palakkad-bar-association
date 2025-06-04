@@ -118,7 +118,7 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="text-center mt-10">
+          {/* <div className="text-center mt-10">
             <Button
               asChild
               variant="outline"
@@ -126,7 +126,7 @@ const Index = () => {
             >
               <Link to="/committees">View All Members</Link>
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
           
@@ -145,7 +145,7 @@ const Index = () => {
                 makes it easy to connect with legal professionals.
               </p>
               <Button asChild className="bg-legal hover:bg-legal-secondary">
-                <Link to="/members">See member directory</Link>
+                <Link to="/committees">See member directory</Link>
               </Button>
             </div>
             <div className="md:w-1/3">
