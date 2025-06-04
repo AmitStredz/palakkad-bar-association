@@ -1,6 +1,16 @@
-
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  AlertDialog,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogAction,
+  AlertDialogCancel,
+} from "@/components/ui/alert-dialog";
 
 interface MediaItem {
   title: string;
@@ -53,9 +63,27 @@ const mediaItems: MediaItem[] = [
 ];
 
 const MediaLibrary = () => {
+  const [dialogOpen, setDialogOpen] = useState(false);
+
   return (
     <div className="container mx-auto px-4">
       <h2 className="text-2xl font-bold text-gray-800 mb-8">Media Library</h2>
+      
+      <AlertDialog open={dialogOpen} onOpenChange={setDialogOpen}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>This item will be available soon</AlertDialogTitle>
+            <AlertDialogDescription>
+              We are working to make this item available. Please check back later.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogAction onClick={() => setDialogOpen(false)}>
+              OK
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
       
       <Tabs defaultValue="all" className="w-full">
         <TabsList className="mb-6">
@@ -71,7 +99,14 @@ const MediaLibrary = () => {
             {mediaItems.map((item) => (
               <Card key={item.title} className="overflow-hidden hover:shadow-lg transition-shadow">
                 <CardContent className="p-0">
-                  <a href={item.url || "#"} className="block">
+                  <a
+                    href="#"
+                    className="block cursor-pointer"
+                    onClick={e => {
+                      e.preventDefault();
+                      setDialogOpen(true);
+                    }}
+                  >
                     <img 
                       src={item.image} 
                       alt={item.title} 
@@ -89,7 +124,14 @@ const MediaLibrary = () => {
             {mediaItems.filter(item => item.category === 'directories').map((item) => (
               <Card key={item.title} className="overflow-hidden hover:shadow-lg transition-shadow">
                 <CardContent className="p-0">
-                  <a href={item.url || "#"} className="block">
+                  <a
+                    href="#"
+                    className="block cursor-pointer"
+                    onClick={e => {
+                      e.preventDefault();
+                      setDialogOpen(true);
+                    }}
+                  >
                     <img 
                       src={item.image} 
                       alt={item.title} 
@@ -107,7 +149,14 @@ const MediaLibrary = () => {
             {mediaItems.filter(item => item.category === 'manuals').map((item) => (
               <Card key={item.title} className="overflow-hidden hover:shadow-lg transition-shadow">
                 <CardContent className="p-0">
-                  <a href={item.url || "#"} className="block">
+                  <a
+                    href="#"
+                    className="block cursor-pointer"
+                    onClick={e => {
+                      e.preventDefault();
+                      setDialogOpen(true);
+                    }}
+                  >
                     <img 
                       src={item.image} 
                       alt={item.title} 
@@ -125,7 +174,14 @@ const MediaLibrary = () => {
             {mediaItems.filter(item => item.category === 'guides').map((item) => (
               <Card key={item.title} className="overflow-hidden hover:shadow-lg transition-shadow">
                 <CardContent className="p-0">
-                  <a href={item.url || "#"} className="block">
+                  <a
+                    href="#"
+                    className="block cursor-pointer"
+                    onClick={e => {
+                      e.preventDefault();
+                      setDialogOpen(true);
+                    }}
+                  >
                     <img 
                       src={item.image} 
                       alt={item.title} 
@@ -143,7 +199,14 @@ const MediaLibrary = () => {
             {mediaItems.filter(item => item.category === 'handbooks').map((item) => (
               <Card key={item.title} className="overflow-hidden hover:shadow-lg transition-shadow">
                 <CardContent className="p-0">
-                  <a href={item.url || "#"} className="block">
+                  <a
+                    href="#"
+                    className="block cursor-pointer"
+                    onClick={e => {
+                      e.preventDefault();
+                      setDialogOpen(true);
+                    }}
+                  >
                     <img 
                       src={item.image} 
                       alt={item.title} 

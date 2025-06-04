@@ -26,9 +26,9 @@ const Footer = () => {
               <a href="https://instagram.com" aria-label="Instagram" className="hover:text-legal-accent">
               <img src="/images/instagram.svg" alt="Instagram" width="24" height="24" />
               </a>
-              <a href="https://facebook.com" aria-label="Facebook" className="hover:text-legal-accent">
+              {/* <a href="https://facebook.com" aria-label="Facebook" className="hover:text-legal-accent">
               <img src="/images/facebook.svg" alt="Facebook" width="24" height="24" />
-              </a>
+              </a> */}
               <a href="https://twitter.com" aria-label="Twitter" className="hover:text-legal-accent">
               <img src="/images/twitter-x.svg" alt="Twitter" width="24" height="24" />
               </a>
@@ -72,7 +72,7 @@ const Footer = () => {
               <p className="mb-2">Karathuparicha, Kunathurmedu</p>
               <p className="mb-2">Palakkad, Kerala 678 001</p>
               <p className="mb-4"></p>
-              <p className="mb-2">+91 0484-2393244 · +91 0484-2394435</p>
+              <p className="mb-2">+91 8089682807</p>
               <p className="mb-2">palakkadbarassociation@gmail.com</p>
             </address>
           </div>
@@ -81,8 +81,8 @@ const Footer = () => {
         <div className="border-t border-gray-600 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
           <p>© Copyright palakkadbarcouncil.com</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <Link to="/privacy" className="hover:underline">Privacy Policy</Link>
-            <Link to="/terms" className="hover:underline">Terms and Conditions</Link>
+            {/* <Link to="/privacy" className="hover:underline">Privacy Policy</Link>
+            <Link to="/terms" className="hover:underline">Terms and Conditions</Link> */}
           </div>
           <div className="mt-4 md:mt-0 text-xs">
             <p>Powered & Sponsored By Purple4app AI PVT LTD</p>

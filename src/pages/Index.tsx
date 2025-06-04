@@ -58,7 +58,7 @@ const Index = () => {
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Dedicated to Justice, Rights, and Legal Excellence</h1>
             <p className="text-lg mb-6">Justice is the cornerstone of a fair society. As legal professionals, we are dedicated to upholding fairness, serving legal needs, for courts, litigants, and the public.</p>
             <Button asChild size="lg" className="bg-legal hover:bg-legal-secondary">
-              <Link to="/contact">Call us: +91 0484-2393244</Link>
+              <Link to="/contact">Call us: +91 8089682807</Link>
             </Button>
           </div>
         </div>
@@ -120,7 +120,7 @@ const Index = () => {
       </section>
       
       {/* News & Events Section */}
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2 text-center">News & Events</h2>
           <div className="w-20 h-1 bg-legal mx-auto mb-10"></div>
@@ -144,7 +144,7 @@ const Index = () => {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
       
       {/* Partner Links Section */}
       <PartnerLinks />

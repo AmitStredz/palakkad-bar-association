@@ -1,11 +1,11 @@
 
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const navigate = useNavigate();
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -14,11 +14,11 @@ const Navbar = () => {
     <nav className="bg-white shadow-sm">
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 cursor-pointer" onClick={()=>navigate('/')}>
             <img 
               src="/images/mainlogo.png" 
               alt="Palakkad District Bar Association" 
-              className="h-16 w-16"
+              className="h-16 w-16 "
               onError={(e) => {
                 e.currentTarget.src = "https://via.placeholder.com/48?text=PDBA";
               }}
@@ -35,18 +35,18 @@ const Navbar = () => {
               <span className="text-legal">palakkadbarassociation@gmail.com</span>
             </div>
             <div className="flex items-center text-sm">
-              <span className="text-legal">+91 0484-2393244</span>
+              <span className="text-legal">+91 8089682807</span>
             </div>
           </div>
 
           {/* Main Navigation - Desktop */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-legal font-medium">
+            {/* <Link to="/" className="text-gray-700 hover:text-legal font-medium">
               Home
-            </Link>
-            <Link to="/about" className="text-gray-700 hover:text-legal font-medium">
+            </Link> */}
+            {/* <Link to="/about" className="text-gray-700 hover:text-legal font-medium">
               Who we are?
-            </Link>
+            </Link> */}
             <Link to="/committees" className="text-gray-700 hover:text-legal font-medium">
               Committees
             </Link>
@@ -66,20 +66,20 @@ const Navbar = () => {
         {/* Mobile menu */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 animate-fade-in">
-            <Link 
+            {/* <Link 
               to="/" 
               className="block py-2 text-gray-700 hover:text-legal"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
-            </Link>
-            <Link 
+            </Link> */}
+            {/* <Link 
               to="/about" 
               className="block py-2 text-gray-700 hover:text-legal"
               onClick={() => setIsMenuOpen(false)}
             >
               Who we are?
-            </Link>
+            </Link> */}
             <Link 
               to="/committees" 
               className="block py-2 text-gray-700 hover:text-legal"
@@ -96,7 +96,7 @@ const Navbar = () => {
             </Link>
             <div className="pt-4 border-t border-gray-200 mt-4">
               <p className="text-sm text-gray-600">palakkadbarassociation@gmail.com</p>
-              <p className="text-sm text-gray-600 mt-2">+91 0484-2393244</p>
+              <p className="text-sm text-gray-600 mt-2">+91 8089682807</p>
             </div>
           </div>
         )}
