@@ -22,7 +22,7 @@ const Footer = () => {
                 <h4 className="font-semibold">BAR ASSOCIATION</h4>
               </div>
             </div>
-            <div className="flex space-x-4 mt-4">
+            {/* <div className="flex space-x-4 mt-4">
               <a
                 href="https://instagram.com"
                 aria-label="Instagram"
@@ -35,9 +35,9 @@ const Footer = () => {
                   height="24"
                 />
               </a>
-              {/* <a href="https://facebook.com" aria-label="Facebook" className="hover:text-legal-accent">
+              <a href="https://facebook.com" aria-label="Facebook" className="hover:text-legal-accent">
               <img src="/images/facebook.svg" alt="Facebook" width="24" height="24" />
-              </a> */}
+              </a>
               <a
                 href="https://twitter.com"
                 aria-label="Twitter"
@@ -62,7 +62,7 @@ const Footer = () => {
                   height="24"
                 />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}
@@ -121,7 +121,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="p-5 px-10 bg-white text-black flex flex-col md:flex-row justify-between items-center text-sm">
-        <p>© Copyright palakkadbarcouncil.com</p>
+        <p>© Copyright palakkadbarassociation.com</p>
         <div className="flex space-x-4 mt-4 md:mt-0">
           {/* <Link to="/privacy" className="hover:underline">Privacy Policy</Link>
             <Link to="/terms" className="hover:underline">Terms and Conditions</Link> */}
@@ -133,17 +133,18 @@ const Footer = () => {
             className="w-32"
           />
           <div className="flex flex-col mt-4 md:mt-0 font-serif">
-            <p>Powered & Sponsored By Purple4app AI PVT LTD</p>
+            <p>Powered & Sponsored By PurpleDrops AI PVT LTD</p>
             <span className="text-[12px]">
               For more Services contact:{" "}
               <span
-                className="text-blue-500 hover:underline cursor-pointer"
-                onClick={() =>
-                  (window.location.href = "mailto:Purpledrops.ai@gmail.com")
-                }
-              >
-                purpledrops.ai@gmail.com
-              </span>
+  className="text-blue-500 hover:underline cursor-pointer"
+  onClick={() => {
+    window.location.href = "mailto:purpledrops.ai@gmail.com";
+  }}
+>
+  purpledrops.ai@gmail.com
+</span>
+
             </span>
           </div>
         </div>
